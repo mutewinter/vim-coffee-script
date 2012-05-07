@@ -13,8 +13,8 @@ let b:did_ftplugin = 1
 " 
 " Usage:
 "   yss% : Surrounds current line with <% %>
-"   yss- : Surrounds current line with <%- %>
-"   yss= : Surrounds current line with <%= %>
+"   yss= : Surrounds current line with <%- %>
+"   yss# : Surrounds current line with <%# %>
 "   And so on, see http://www.vim.org/scripts/script.php?script_id=1697 for 
 "   more usage info.
 " 
@@ -29,8 +29,8 @@ function! s:buffer_setvar(varname, val)
 endfunction
 
 if exists("g:loaded_surround")
-  if s:buffer_getvar('surround_45') == '' || s:buffer_getvar('surround_45') == "<% \r %>" " -
-    call s:buffer_setvar('surround_45', "<% \r -%>")
+  if s:buffer_getvar('surround_37') == '' || s:buffer_getvar('surround_37') == "<% \r %>" " %
+    call s:buffer_setvar('surround_37', "<% \r %>")
   endif
   if s:buffer_getvar('surround_61') == '' " =
     call s:buffer_setvar('surround_61', "<%= \r %>")
